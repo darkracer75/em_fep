@@ -36,7 +36,7 @@ public class PacketLengthFieldBasedFrameDecoder extends LengthFieldBasedFrameDec
             frameLength = Long.valueOf(lengthStr);
         } catch (NumberFormatException e) {
             throw new DecoderException(
-                    "lengthField is not number: \"" + lengthStr + "\"");
+                    "길이필드가 숫자가 아님: \"" + lengthStr + "\"");
         }
         return frameLength;
 
